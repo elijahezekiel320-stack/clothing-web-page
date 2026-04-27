@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product Detail</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+         <header>
+            <h1>My Clothing</h1>
+         </header>
+
+         <section class="product-details">
+
+            <div class="product-container">
+
+                <div class="product-image">
+                    <img id="product-img" src="" alt="">
+                </div>
+
+            <div class="product-info">
+            <h2 id="product-name"></h2>
+            <p id="product-price"></p>
+            <p>This is a high-quality product</p>
+          
+            <button onclick="addproductToCart(name, price)">Add To Cart</button>
+            <p id="message"></p>
+            </div>
+    
+           </div>
+
+         </section>
+
+            <p id="message"></p>
+
+         <section class="cart-box">
+           <h3>Your Cart</h3>
+           <ul id="cart-list"></ul>
+           <p id="total"></p>
+         </section>
+        
+        <script src="script.js"></script>
+
+         <script>
+            let params = new URLSearchParams(window.location.search);
+
+            let name = params.get("name");
+            let price =parseFloat(params.get("price"));
+            let img = params.get("img");
+
+            document.getElementById("product-name").textContent = name;
+            document.getElementById("product-price").textContent = "price: $" + price;
+            document.getElementById("product-img"). src = img;
+
+            function addproductToCart(){
+                addToCart(name, Number(price));
+                displayCart();
+
+            document.getElementById("message").textContent = name + " has been added to cart. ";
+
+            setTimeout(() => {
+              document.getElementById("message").textContent = "";
+            }, 2000);
+        }
+
+        displayCart();
+         </script>
+
+    </body>
+</html>

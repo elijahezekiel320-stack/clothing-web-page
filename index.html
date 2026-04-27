@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing page</title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Clothing</h1>
+
+    <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Cart</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <section class="hero">
+        <h2>New Collections</h2>
+        <p>Discover the latest fashion styles</p>
+        <button onclick="goToProducts()">Shop Now</button> 
+    </section>
+
+    <section class="products" id="products">
+        <h2>Our products</h2>
+
+        <div class="products-container">
+
+            <div class="card">
+                <img src="images/shirt1.jpg" alt="Black T-Shirt ">
+                <h3>Black T-shirt</h3>
+                <p>$20</p>
+                <a href="tshirts.html">
+                  <button>See More T-Shirt</button>
+                </a>
+            </div>
+
+            <div class="card">
+                <img src="images/hoodie.jpg" alt="White Hoodie">
+                <h3>White Hoodie</h3>
+                <p>$35</p>
+                <a href="hoodie.html">
+                <button>See More Hoodie</button>
+                </a>
+            </div>
+
+            <div class="card">
+                <img src="images/jeans.jpg" alt="Blue Jeans">
+                <h3>Blue Jeans</h3>
+                <p>$40</p>
+                <a href="jeans.html">
+                  <button>See More Jeans</button>
+                </a>
+            </div>
+            
+        </div>
+        
+    </section>
+
+<footer>
+    <p>&copy 2026 My Clothing</p>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
